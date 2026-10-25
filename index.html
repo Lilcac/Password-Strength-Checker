@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Check password strength locally in your browser with helpful security recommendations.">
+    <title>Password Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <div class="logo" aria-hidden="true">✓</div>
+            <p class="eyebrow">PERSONAL SECURITY TOOL</p>
+            <h1>Password Checker</h1>
+            <p class="subtitle">
+                Understand your password strength and discover ways
+                to improve it.
+            </p>
+        </header>
+
+        <section class="checker-card" aria-labelledby="input-heading">
+            <label for="password" id="input-heading">
+                Enter a password
+            </label>
+
+            <div class="password-field">
+                <input
+                    id="password"
+                    type="password"
+                    placeholder="Enter a fictional test password"
+                    autocomplete="off"
+                    spellcheck="false"
+                    autocapitalize="off"
+                >
+                <button
+                    type="button"
+                    id="toggle-password"
+                    class="toggle-button"
+                    aria-label="Show password"
+                    aria-pressed="false"
+                >
+                    Show
+                </button>
+            </div>
+
+            <p class="privacy-note">
+                <span aria-hidden="true">🔒</span>
+                Your password is checked locally in this browser.
+            </p>
+
+            <div class="result" aria-live="polite">
+                <div class="result-heading">
+                    <h2>Strength assessment</h2>
+                    <span id="rating" class="rating">Not checked</span>
+                </div>
+
+                <div
+                    class="strength-track"
+                    role="progressbar"
+                    aria-label="Password strength"
+                    aria-valuemin="0"
+                    aria-valuemax="5"
+                    aria-valuenow="0"
+                    id="strength-track"
+                >
+                    <div id="strength-bar" class="strength-bar"></div>
+                </div>
+
+                <p id="score" class="score">Score: — / 5</p>
+
+                <h3>Security checklist</h3>
+                <ul id="checklist" class="checklist">
+                    <li>Enter a password to begin your assessment.</li>
+                </ul>
+
+                <h3>Recommendations</h3>
+                <ul id="feedback" class="feedback">
+                    <li>Your results will appear here as you type.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="info-card">
+            <h2>How it works</h2>
+            <p>
+                The checker evaluates length, character variety,
+                common passwords, predictable sequences and
+                repeated characters.
+            </p>
+            <p>
+                This is a basic heuristic, not a guarantee of
+                password security. The common-password list is
+                limited and does not check external breach databases.
+            </p>
+        </section>
+
+        <footer>
+            <p>Password Checker · Python and Web Development Project</p>
+        </footer>
+    </main>
+</body>
+</html>

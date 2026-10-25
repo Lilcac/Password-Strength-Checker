@@ -1,0 +1,288 @@
+
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+    background: #f6f8fb;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    --accent: #0d9488;
+    --border: #e2e8f0;
+    --muted: #64748b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container {
+    width: min(100% - 32px, 660px);
+    margin: 0 auto;
+    padding: 52px 0 24px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 18px;
+    border-radius: 15px;
+    background: #ccfbf1;
+    color: #0f766e;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 10px 0;
+    font-size: clamp(30px, 6vw, 42px);
+    letter-spacing: -1.5px;
+}
+
+.subtitle {
+    max-width: 440px;
+    margin: 0 auto;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.checker-card,
+.info-card {
+    padding: 26px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 8px 28px rgb(15 23 42 / 4%);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.password-field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 6px 5px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background: white;
+}
+
+.password-field:focus-within {
+    border-color: var(--accent);
+    outline: 3px solid rgb(13 148 136 / 12%);
+}
+
+input {
+    width: 100%;
+    min-width: 0;
+    padding: 10px 0;
+    border: 0;
+    outline: none;
+    color: #1f2937;
+    background: transparent;
+    font: inherit;
+}
+
+.toggle-button {
+    padding: 9px 12px;
+    border: 0;
+    border-radius: 7px;
+    background: #f1f5f9;
+    color: #334155;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.toggle-button:hover {
+    background: #e2e8f0;
+}
+
+button:focus-visible {
+    outline: 3px solid #5eead4;
+    outline-offset: 3px;
+}
+
+.privacy-note {
+    margin: 12px 0 25px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.result {
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+}
+
+.result-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+h2 {
+    margin: 0 0 16px;
+    font-size: 17px;
+}
+
+.rating {
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.rating.weak {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.rating.moderate {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.rating.strong {
+    background: #ccfbf1;
+    color: #0f766e;
+}
+
+.strength-track {
+    height: 8px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #e2e8f0;
+}
+
+.strength-bar {
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: #dc2626;
+    transition: width 180ms ease, background 180ms ease;
+}
+
+.strength-bar.moderate {
+    background: #d97706;
+}
+
+.strength-bar.strong {
+    background: #0d9488;
+}
+
+.score {
+    margin: 9px 0 24px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+h3 {
+    margin: 22px 0 12px;
+    font-size: 14px;
+}
+
+.checklist,
+.feedback {
+    display: grid;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.checklist li,
+.feedback li {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    color: #475569;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.checklist li::before {
+    content: "○";
+    color: #94a3b8;
+    font-weight: bold;
+}
+
+.checklist li.pass::before {
+    content: "✓";
+    color: var(--accent);
+}
+
+.feedback li::before {
+    content: "•";
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.info-card {
+    margin-top: 18px;
+    box-shadow: none;
+}
+
+.info-card h2 {
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+footer {
+    padding-top: 20px;
+    color: var(--muted);
+    font-size: 11px;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding-top: 32px;
+    }
+
+    .checker-card,
+    .info-card {
+        padding: 20px;
+    }
+
+    .result-heading {
+        align-items: flex-start;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}
